@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f0f0f0;
+  --foreground: #101010;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #101010;
+    --foreground: #f0f0f0;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Montserrat , Arial, Helvetica, sans-serif;
+}
+
+.text-stroke {
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: white;
+}
+
+.huge-font {
+  font-size: 220px;
+  font-weight: bold;
+}
+
+.title-font {
+  font-size: 124px;
+  font-weight: bold;
+}
+
+.big-font {
+  font-size: 80px;
+  font-weight: bold;
+}
+
+.H1-font{
+  font-size: 64px;
+  font-weight: bold;
+}
+
+.H2-font{
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.button-font{
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.text-font{
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.small-font{
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.hero-button{
+  background-color: #101010;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.hero-button:hover{
+  background-color: #f0f0f0;
+  font-size: 16px;
+  font-weight: bold;
+}
