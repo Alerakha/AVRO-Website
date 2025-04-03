@@ -38,6 +38,15 @@ body {
   font-weight: bold;
 }
 
+.big-font-2 {
+  font-size: 72px;
+  font-weight: bold;
+}
+.big-font-3 {
+  font-size: 64px;
+  font-weight: bold;
+}
+
 .H1-font{
   font-size: 64px;
   font-weight: bold;

@@ -9,13 +9,18 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Landing Page",
-  description: "Landing page dengan Next.js dan Tailwind CSS",
+  title: "AVRO",
+  description: "AVRO - Aerial Vehicle Robo Team",
+  icons: {
+    icon: "/assets/logo.png",
+  },
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{ children: React.ReactNode }>) {
+}: {
+  children: React.ReactNode
+}) {
   return (
     <html lang="en">
       <body className={`${montserrat.variable} bg-dark text-light`}>

@@ -4,7 +4,7 @@ export default function RoadmapSection() {
   return (
     <section className="w-full px-8 sm:px-16 lg:px-24 pt-56 pb-80 bg-gradient-to-b from-dark via-[#f0f0f0] to-dark text-white flex flex-col items-center gap-8 relative">
       <Image
-        className="absolute left-1/2 -translate-x-1/2 h-full w-full object-contain opacity-20 mix-blend-color-burn"
+        className="absolute left-1/2 -translate-x-1/2 h-full w-full object-cover opacity-20 mix-blend-color-burn"
         src="/assets/Dewoitine_D.551.png"
         alt="Dewoitine D.551"
         width={1000}

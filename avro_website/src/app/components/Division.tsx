@@ -1,5 +1,5 @@
 'use client';
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import Card from "./Card";
 
 interface DivisionCardProps {
@@ -11,6 +11,18 @@ interface DivisionCardProps {
 
 const DivisionCard = ({ title, name, description, pdfPath }: DivisionCardProps) => {
   const [isActive, setIsActive] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   const handleDownload = () => {
     // Create a temporary anchor element
@@ -26,8 +38,8 @@ const DivisionCard = ({ title, name, description, pdfPath }: DivisionCardProps) 
     <div 
       className="relative"
       onClick={() => setIsActive(!isActive)}
-      onMouseEnter={() => window.innerWidth > 768 && setIsActive(true)}
-      onMouseLeave={() => window.innerWidth > 768 && setIsActive(false)}
+      onMouseEnter={() => !isMobile && setIsActive(true)}
+      onMouseLeave={() => !isMobile && setIsActive(false)}
     >
       {/* Card Content */}
       <Card title={title} />
