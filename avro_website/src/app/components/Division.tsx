@@ -38,14 +38,14 @@ const DivisionCard = ({ title, name, description, pdfPath }: DivisionCardProps) 
           isActive ? "opacity-100" : "opacity-0"
         }`}
       >
-        <h3 className="text-lg font-semibold mb-2">{name}</h3>
-        <p className="text-sm text-center mb-4">{description}</p>
+        <h3 className="text-lg font-semibold mb-2 text-white">{name}</h3>
+        <p className="text-sm text-center mb-4 text-white">{description}</p>
         <button 
           onClick={(e) => {
             e.stopPropagation();
             handleDownload();
           }}
-          className="px-4 py-2 bg-[#f0f0f0] hover:bg-[#1d1d1d] text-[#1d1d1d] hover:text-[#f0f0f0] hover:border-2 hover:border-[#f0f0f0]  text-sm font-semibold rounded-full transition-all duration-300 cursor-pointer"
+          className="px-4 py-2 bg-[#f0f0f0] hover:bg-[#1d1d1d] text-[#1d1d1d] hover:text-[#f0f0f0] hover:border-2 hover:border-[#f0f0f0] text-sm font-semibold rounded-full transition-all duration-300 cursor-pointer"
         >
           Lihat Detail
         </button>
@@ -78,9 +78,9 @@ export default function Division() {
 
   return (
     <div className="px-4 sm:px-8 md:px-16 lg:px-24 py-24 inline-flex flex-col justify-center items-center gap-8 bg-transparent cursor-default">
-      <h2 className="H2-font text-2xl sm:text-3xl md:text-4xl">OUR DIVISION</h2>
+      <h2 className="H2-font text-2xl sm:text-3xl md:text-4xl text-white">OUR DIVISION</h2>
       <div className="self-stretch flex flex-col justify-center items-center gap-2.5">
-        <p className="px-4 sm:px-8 md:px-11 small-font text-xs sm:text-sm md:text-base lg:text-lg">
+        <p className="px-4 sm:px-8 md:px-11 small-font text-xs sm:text-sm md:text-base lg:text-lg text-white">
           AVRO memiliki tiga divisi dengan pengabdian dan tujuan yang
           berbeda-beda terhadap pengembangan aeromodelling di lingkungan
           politeknik negeri malang. Hingga saat ini divisi yang dimiliki

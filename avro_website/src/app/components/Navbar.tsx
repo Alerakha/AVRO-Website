@@ -26,19 +26,19 @@ export default function Navbar() {
         <div className="hidden sm:flex px-8 py-2 rounded-[120px] justify-start items-center gap-10">
           <a
             onClick={() => window.scrollTo({top:0, behavior:'smooth'})}
-            className="justify-start small-font cursor-pointer relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-current hover:after:w-full after:transition-all after:duration-300"
+            className="justify-start small-font cursor-pointer text-white relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-current hover:after:w-full after:transition-all after:duration-300"
           >
             TENTANG
           </a>
           <a
             onClick={() => scrollToSection('divisi')}
-            className="justify-start small-font cursor-pointer relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-current hover:after:w-full after:transition-all after:duration-300"
+            className="justify-start small-font cursor-pointer text-white relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-current hover:after:w-full after:transition-all after:duration-300"
           >
             DIVISI
           </a>
           <a
             onClick={() => scrollToSection('roadmap')}
-            className="justify-start small-font cursor-pointer relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-current hover:after:w-full after:transition-all after:duration-300"
+            className="justify-start small-font cursor-pointer text-white relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-current hover:after:w-full after:transition-all after:duration-300"
           >
             ROADMAP
           </a>

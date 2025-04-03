@@ -18,7 +18,7 @@ export default function Home() {
   };
   
   return (
-    <div className="w-full pt-32 pb-24 relative inline-flex flex-col justify-center items-center gap-20 overflow-hidden">
+    <div className="w-full pt-32 pb-24 relative inline-flex flex-col justify-center items-center gap-20 overflow-hidden bg-[#101010]">
       {/* NAVBAR */}
       <Navbar />
       {/* NAVBAR END */}
@@ -46,29 +46,29 @@ export default function Home() {
         </div> */}
         {/* Hero Tittle Wrapper */}
         <div className="px-4 sm:px-8 md:px-16 lg:px-42 flex flex-col justify-center items-center gap-3">
-          <h1 className="big-font text-center opacity-40 text-xl sm:text-2xl md:text-3xl lg:text-4xl">
+          <h1 className="big-font text-center opacity-40 text-xl sm:text-2xl md:text-3xl lg:text-4xl text-white">
             AERIAL VEHICLE ROBO TEAM
           </h1>
-          <p className="text-center small-font text-sm sm:text-base">
+          <p className="text-center small-font text-sm sm:text-base text-white">
             Polinema Aeromodelling Robotics Community
           </p>
           {/* Button */}
           <div className="h-24 self-stretch py-4 px-4 sm:px-8 md:px-16 lg:px-24 inline-flex flex-row justify-center items-center gap-4 sm:gap-8">
             <a
               onClick={() => scrollToSection('divisi')}
-              className="w-auto px-6 py-4 rounded-[48px] shadow-[0px_0px_32px_0px_rgba(240,240,240,0.25)] outline-2 outline-offset-[-2px] transition-all duration-300 outline-zinc-100 text-center hero-button hover:text-[#101010] cursor-pointer"
+              className="w-auto px-6 py-4 rounded-[48px] shadow-[0px_0px_32px_0px_rgba(240,240,240,0.25)] outline-2 outline-offset-[-2px] transition-all duration-300 outline-zinc-100 text-center hero-button hover:text-[#101010] cursor-pointer text-white"
             >
               About Us
             </a>
             <a
               onClick={() => setIsRecruitmentOpen(true)}
-              className="w-auto px-6 py-4 rounded-[48px] shadow-[0px_0px_32px_0px_rgba(240,240,240,0.25)] outline-2 outline-offset-[-2px] transition-all duration-300 outline-zinc-100 text-center hero-button hover:text-[#101010] cursor-pointer"
+              className="w-auto px-6 py-4 rounded-[48px] shadow-[0px_0px_32px_0px_rgba(240,240,240,0.25)] outline-2 outline-offset-[-2px] transition-all duration-300 outline-zinc-100 text-center hero-button hover:text-[#101010] cursor-pointer text-white"
             >
               Open Recruitment
             </a>
           </div>
         </div>
-        <p className="px-4 sm:px-8 md:px-11 small-font text-sm sm:text-base">
+        <p className="px-4 sm:px-8 md:px-11 small-font text-sm sm:text-base text-white">
           AVRO merupakan singkatan dari Aerial Vehicle Robo Team, yaitu tim yang
           bertujuan melakukan riset seputar wahana terbang tanpa awak di
           Politeknik Negeri Malang. Tujuan kami adalah menciptakan generasi yang
