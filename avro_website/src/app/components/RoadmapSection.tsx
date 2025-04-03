@@ -1,24 +1,14 @@
-const RoadmapStep = ({
-  title,
-  description,
-}: {
-  title: string;
-  description: string;
-}) => {
-  return (
-    <div className="text-center max-w-3xl">
-      <h3 className="text-2xl font-bold">{title}</h3>
-      <p className="text-font">{description}</p>
-    </div>
-  );
-};
+import Image from 'next/image';
 
 export default function RoadmapSection() {
   return (
     <section className="w-full px-8 sm:px-16 lg:px-24 pt-56 pb-80 bg-gradient-to-b from-dark via-[#f0f0f0] to-dark text-[#242424] flex flex-col items-center gap-8 relative">
-      <img
+      <Image
         className="absolute left-1/2 -translate-x-1/2 h-full w-full object-contain opacity-20 mix-blend-color-burn"
         src="/assets/Dewoitine_D.551.png"
+        alt="Dewoitine D.551"
+        width={1000}
+        height={1000}
       />
       <h2 className="H2-font relative text-center">
         OUR ROADMAP CYCLE

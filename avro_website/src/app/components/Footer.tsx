@@ -1,3 +1,4 @@
+import Image from 'next/image';
 export default function Footer() {
   return (
     <div className="w-full px-2 sm:px-8 md:px-10 py-2 bottom-0 absolute flex flex-col justify-center items-center gap-2.5 cursor-default">
@@ -9,9 +10,12 @@ export default function Footer() {
           AVRO POLINEMA All Right Reserved
         </div>
         <div className="w-full sm:flex-1 flex justify-center items-center gap-2">
-          <img
+          <Image
             className="w-5 h-5 sm:w-6 sm:h-6 rounded-md"
             src="/assets/instagram.png"
+            alt="Instagram AVRO"
+            width={24}
+            height={24}
           />
           <a 
             href="https://www.instagram.com/avro_polinema"

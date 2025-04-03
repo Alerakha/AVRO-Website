@@ -1,4 +1,5 @@
 'use client';
+import Image from 'next/image';
 import {useState} from 'react';
 import RecruitmentPopup from './RecruitmentPopup';
 
@@ -18,7 +19,7 @@ export default function Navbar() {
     <>
       <div className="w-full px-4 sm:px-9 py-4 left-0 top-0 fixed bg-[#101010] shadow-[0px_32px_32px_0px_rgba(29,29,29,0.45)] inline-flex justify-between items-center z-50">
         <a onClick={() => window.scrollTo({top:0, behavior:'smooth'})} className="cursor-pointer">
-          <img className="w-24 sm:w-28 h-9 sm:h-11" src="assets/logo.png" />
+          <Image className="w-24 sm:w-28 h-9 sm:h-11" src="/assets/logo.png" alt="AVRO Logo" width={100} height={100} />
         </a>
         
         {/* Desktop Menu */}

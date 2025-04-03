@@ -1,6 +1,4 @@
 'use client';
-import Image from "next/image";
-import Card from "./components/Card";
 import RoadmapSection from "./components/RoadmapSection";
 import Footer from "./components/Footer";
 import Division from "./components/Division";
