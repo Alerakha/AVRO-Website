@@ -12,10 +12,15 @@ export default function Footer() {
         <div className="w-full sm:flex-1 flex justify-center items-center gap-2">
           <Image
             className="w-5 h-5 sm:w-6 sm:h-6 rounded-md"
-            src="/assets/instagram.png"
+            src="/assets/Instagram.png"
             alt="Instagram AVRO"
             width={24}
             height={24}
+            style={{ backgroundColor: 'transparent' }}
+            onError={(e) => {
+              const target = e.target as HTMLImageElement;
+              target.style.opacity = '0';
+            }}
           />
           <a 
             href="https://www.instagram.com/avro_polinema"

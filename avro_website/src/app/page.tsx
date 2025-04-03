@@ -53,7 +53,7 @@ export default function Home() {
             Polinema Aeromodelling Robotics Community
           </p>
           {/* Button */}
-          <div className="h-24 self-stretch py-4 px-4 sm:px-8 md:px-16 lg:px-56 inline-flex flex-row justify-center items-center gap-4 sm:gap-8">
+          <div className="h-24 self-stretch py-4 px-4 sm:px-8 md:px-16 lg:px-24 inline-flex flex-row justify-center items-center gap-4 sm:gap-8">
             <a
               onClick={() => scrollToSection('divisi')}
               className="w-auto px-6 py-4 rounded-[48px] shadow-[0px_0px_32px_0px_rgba(240,240,240,0.25)] outline-2 outline-offset-[-2px] transition-all duration-300 outline-zinc-100 text-center hero-button hover:text-[#101010] cursor-pointer"
