@@ -24,14 +24,18 @@ export default function Home() {
       {/* NAVBAR END */}
       {/* CONTENT START */}
       {/* HERO SECTION START */}
-      <main id="tentang" className="px-4 sm:px-8 md:px-16 lg:px-24 inline-flex flex-col justify-center items-center gap-4 cursor-default">
-        <video
-          className="w-full h-[640px] left-0 top-0 absolute object-cover opacity-30 -z-30"
-          src="/assets/output.mp4"
-          autoPlay
-          loop
-          muted
-        />
+      <main id="tentang" className="px-4 sm:px-8 md:px-16 lg:px-24 inline-flex flex-col justify-center items-center gap-4 cursor-default relative">
+        <div className="absolute -top-38 inset-x-0 w-full h-[640px] overflow-hidden">
+          <video
+            className="w-full h-full object-cover opacity-30"
+            src="/assets/output.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="auto"
+          />
+        </div>
         {/* <div className="w-full h-full px-8 sm:px-16 lg:px-24 top-0 absolute -z-20">
           <div className="w-full h-full flex justify-between saturate-0 opacity-15">
             <div className="flex gap-4">
@@ -45,7 +49,7 @@ export default function Home() {
           </div>
         </div> */}
         {/* Hero Tittle Wrapper */}
-        <div className="px-4 sm:px-8 md:px-16 lg:px-42 flex flex-col justify-center items-center gap-3">
+        <div className="px-4 sm:px-8 md:px-16 lg:px-42 flex flex-col justify-center items-center gap-3 relative z-10">
           <h1 className="big-font text-center opacity-40 text-xl sm:text-2xl md:text-3xl lg:text-4xl text-white">
             AERIAL VEHICLE ROBO TEAM
           </h1>
