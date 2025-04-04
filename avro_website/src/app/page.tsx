@@ -49,15 +49,15 @@ export default function Home() {
           </div>
         </div> */}
         {/* Hero Tittle Wrapper */}
-        <div className="px-4 sm:px-8 md:px-16 lg:px-42 flex flex-col justify-center items-center gap-3 relative z-10">
-          <h1 className="text-[40px] sm:text-[64px] md:text-[72px] lg:text-[80px] font-bold text-center opacity-40 text-white">
+        <div className="px-4 sm:px-4 md:px-8 lg:px-24 flex flex-col justify-center items-center gap-3 relative z-10">
+          <h1 className="text-[40px] sm:text-[48px] md:text-[64px] lg:text-[72px] font-bold text-center opacity-40 text-white">
             AERIAL VEHICLE ROBO TEAM
           </h1>
           <p className="text-center small-font text-sm sm:text-base text-white">
             Polinema Aeromodelling Robotics Community
           </p>
           {/* Button */}
-          <div className="h-24 self-stretch py-4 px-4 sm:px-6 md:px-14 lg:px-24 inline-flex flex-row justify-center items-center gap-4 sm:gap-8">
+          <div className="h-24 self-stretch py-4 sm:px-6 md:px-14 lg:px-24 inline-flex flex-row justify-center items-center gap-4 sm:gap-8">
             <a
               onClick={() => scrollToSection('divisi')}
               className="w-auto px-6 py-4 rounded-[48px] shadow-[0px_0px_32px_0px_rgba(240,240,240,0.25)] outline-2 outline-offset-[-2px] transition-all duration-300 outline-zinc-100 text-center hero-button hover:text-[#101010] cursor-pointer text-white"

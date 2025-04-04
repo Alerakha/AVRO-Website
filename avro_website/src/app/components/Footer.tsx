@@ -3,10 +3,10 @@ export default function Footer() {
   return (
     <div className="w-full px-2 sm:px-8 md:px-10 py-2 bottom-0 absolute flex flex-col justify-center items-center gap-2.5 cursor-default">
       <div className="w-full flex flex-col sm:flex-row justify-start items-center gap-3 sm:gap-2.5">
-        <div className="w-full sm:flex-1 text-center justify-start text-[10px] sm:text-xs">
+        <div className="w-full sm:flex-1 text-center justify-start text-[10px] sm:text-[6px]">
           avropolinema@gmail.com
         </div>
-        <div className="w-full sm:flex-1 text-center justify-start text-[10px] sm:text-xs">
+        <div className="w-full sm:flex-1 text-center justify-start text-[10px] sm:text-[6px]">
           AVRO POLINEMA All Right Reserved
         </div>
         <div className="w-full sm:flex-1 flex justify-center items-center gap-2">
@@ -24,7 +24,7 @@ export default function Footer() {
           />
           <a 
             href="https://www.instagram.com/avro_polinema"
-            className="text-center justify-start text-[10px] sm:text-xs"
+            className="text-center justify-start text-[10px] sm:text-[6px]"
           >
             Instagram AVRO
           </a>

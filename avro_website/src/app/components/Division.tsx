@@ -35,32 +35,22 @@ const DivisionCard = ({ title, name, description, pdfPath }: DivisionCardProps) 
   };
 
   return (
-    <div 
-      className="relative"
-      onClick={() => setIsActive(!isActive)}
-      onMouseEnter={() => !isMobile && setIsActive(true)}
-      onMouseLeave={() => !isMobile && setIsActive(false)}
-    >
-      {/* Card Content */}
+    <div className="relative group">
       <Card title={title} />
-
-      {/* Overlay Description */}
-      <div
-        className={`absolute inset-0 flex flex-col items-center justify-center p-4 bg-black/80 rounded-3xl transition-opacity duration-300 ${
-          isActive ? "opacity-100" : "opacity-0"
-        }`}
-      >
-        <h3 className="text-lg font-semibold mb-2 text-white">{name}</h3>
-        <p className="text-sm text-center mb-4 text-white">{description}</p>
+      <div className="absolute inset-0 rounded-[40px] bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-8">
+        <h3 className="text-2xl font-bold text-white mb-4">{name}</h3>
+        <p className="text-white text-center mb-6">{description}</p>
+        <div className="h-24 flex flex-col items-center">
         <button 
           onClick={(e) => {
             e.stopPropagation();
             handleDownload();
           }}
-          className="px-4 py-2 bg-[#f0f0f0] hover:bg-[#1d1d1d] text-[#1d1d1d] hover:text-[#f0f0f0] hover:border-2 hover:border-[#f0f0f0] text-sm font-semibold rounded-full transition-all duration-300 cursor-pointer"
+          className="px-6 py-4 my-4 rounded-[48px] shadow-[0px_0px_32px_0px_rgba(240,240,240,0.25)] outline-2 outline-offset-[-2px] transition-all duration-300 outline-zinc-100 text-center hero-button hover:text-[#101010] cursor-pointer text-white"
         >
           Lihat Detail
         </button>
+        </div>
       </div>
     </div>
   );
@@ -89,10 +79,10 @@ export default function Division() {
   ];
 
   return (
-    <div className="px-4 sm:px-8 md:px-16 lg:px-24 py-24 inline-flex flex-col justify-center items-center gap-8 bg-transparent cursor-default">
-      <h2 className="H2-font text-2xl sm:text-3xl md:text-4xl text-white">OUR DIVISION</h2>
+    <div className="px-4 sm:px-8 md:px-16 lg:px-24 py-12 sm:py-24 inline-flex flex-col justify-center items-center gap-8 bg-transparent cursor-default">
+      <h2 className="H2-font text-2xl sm:text-3xl md:text-4xl text-white text-center">OUR DIVISION</h2>
       <div className="self-stretch flex flex-col justify-center items-center gap-2.5">
-        <p className="px-4 sm:px-8 md:px-11 small-font text-xs sm:text-sm md:text-base lg:text-lg text-white">
+        <p className="px-4 sm:px-8 md:px-11 small-font text-xs sm:text-sm md:text-base lg:text-lg text-white text-center">
           AVRO memiliki tiga divisi dengan pengabdian dan tujuan yang
           berbeda-beda terhadap pengembangan aeromodelling di lingkungan
           politeknik negeri malang. Hingga saat ini divisi yang dimiliki
@@ -101,7 +91,7 @@ export default function Division() {
         </p>
       </div>
       {/* CARD WRAPPER START*/}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full place-items-center">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {divisions.map((division) => (
           <DivisionCard
             key={division.title}

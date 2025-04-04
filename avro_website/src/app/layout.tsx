@@ -12,8 +12,9 @@ export const metadata: Metadata = {
   title: "AVRO",
   description: "AVRO - Aerial Vehicle Robo Team",
   icons: {
-    icon: "/assets/logo.png",
+    icon: '/assets/favicon.png',
   },
+  manifest: '/manifest.json',
 };
 
 export default function RootLayout({
