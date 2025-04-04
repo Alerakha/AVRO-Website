@@ -76,7 +76,7 @@ export default function Division() {
   ];
 
   return (
-    <div className="px-4 sm:px-8 md:px-16 lg:px-24 py-12 sm:py-24 inline-flex flex-col justify-center items-center gap-8 bg-transparent cursor-default">
+    <div className="px-2 sm:px-4 md:px-12 lg:px-16 py-12 sm:py-24 inline-flex flex-col justify-center items-center gap-8 bg-transparent cursor-default">
       <h2 className="H2-font text-2xl sm:text-3xl md:text-4xl text-white text-center">OUR DIVISION</h2>
       <div className="self-stretch flex flex-col justify-center items-center gap-2.5">
         <p className="px-4 sm:px-8 md:px-11 small-font text-xs sm:text-sm md:text-base lg:text-lg text-white text-center">
@@ -88,15 +88,18 @@ export default function Division() {
         </p>
       </div>
       {/* CARD WRAPPER START*/}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-7xl mx-auto">
         {divisions.map((division) => (
-          <DivisionCard
-            key={division.title}
-            title={division.title}
-            name={division.name}
-            description={division.description}
-            pdfPath={division.pdfPath}
-          />
+          <div key={division.title} className="flex justify-center">
+            <div className="w-[360px]">
+              <DivisionCard
+                title={division.title}
+                name={division.name}
+                description={division.description}
+                pdfPath={division.pdfPath}
+              />
+            </div>
+          </div>
         ))}
       </div>
       {/* CARD WRAPPER END */}
