@@ -11,18 +11,6 @@ interface DivisionCardProps {
 
 const DivisionCard = ({ title, name, description, pdfPath }: DivisionCardProps) => {
   const [isActive, setIsActive] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-    
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-    
-    return () => window.removeEventListener('resize', checkMobile);
-  }, []);
 
   const handleDownload = () => {
     // Create a temporary anchor element
@@ -35,21 +23,30 @@ const DivisionCard = ({ title, name, description, pdfPath }: DivisionCardProps) 
   };
 
   return (
-    <div className="relative group">
+    <div 
+      className="relative group w-full sm:w-[360px]"
+      onClick={() => setIsActive(!isActive)}
+      onTouchStart={(e) => {
+        e.preventDefault();
+        setIsActive(!isActive);
+      }}
+    >
       <Card title={title} />
-      <div className="absolute inset-0 rounded-[40px] bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-8">
+      <div className={`absolute inset-0 w-full sm:w-[360px] rounded-[40px] bg-black/80 transition-opacity duration-300 flex flex-col justify-center items-center p-8 ${
+        isActive ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'
+      }`}>
         <h3 className="text-2xl font-bold text-white mb-4">{name}</h3>
         <p className="text-white text-center mb-6">{description}</p>
         <div className="h-24 flex flex-col items-center">
-        <button 
-          onClick={(e) => {
-            e.stopPropagation();
-            handleDownload();
-          }}
-          className="px-6 py-4 my-4 rounded-[48px] shadow-[0px_0px_32px_0px_rgba(240,240,240,0.25)] outline-2 outline-offset-[-2px] transition-all duration-300 outline-zinc-100 text-center hero-button hover:text-[#101010] cursor-pointer text-white"
-        >
-          Lihat Detail
-        </button>
+          <button 
+            onClick={(e) => {
+              e.stopPropagation();
+              handleDownload();
+            }}
+            className="px-6 py-4 my-4 rounded-[48px] shadow-[0px_0px_32px_0px_rgba(240,240,240,0.25)] outline-2 outline-offset-[-2px] transition-all duration-300 outline-zinc-100 text-center hero-button hover:text-[#101010] cursor-pointer text-white"
+          >
+            Lihat Detail
+          </button>
         </div>
       </div>
     </div>
